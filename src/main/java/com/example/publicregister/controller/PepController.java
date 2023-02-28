@@ -49,7 +49,6 @@ public class PepController {
     @GetMapping("/popularNames")
     public ResponseEntity<List<PopularNameResponseDTO>> getPopularNames() {
         List<PopularNameResponseDTO> result = pepService.findPopularPepByFirstName(10);
-        System.out.println(result);
         return ResponseEntity.ok(result);
     }
 }
